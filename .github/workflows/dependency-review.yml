@@ -13,16 +13,7 @@ permissions: {}
 
 jobs:
   dependency-review:
-    name: Dependency Review
-    runs-on: ubuntu-latest
+    if: github.event.repository.private == false
     permissions:
       contents: read
-    steps:
-      - name: Checkout
-        id: checkout
-        uses: actions/checkout@9bb56186c3b09b4f86b1c65136769dd318469633 # v4.1.2
-
-      - name: Dependency Review
-        uses: actions/dependency-review-action@9129d7d40b8c12c1ed0f60400d00c92d437adcce # v4.1.3
-        with:
-          fail-on-severity: critical
+    uses: ministryofjustice/analytical-platform-airflow-github-actions/.github/workflows/shared-dependency-review.yml@cd24da6c1e3f42d5153c37881d440ac4449d5e0b # v1.4.0
