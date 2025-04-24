@@ -1,4 +1,4 @@
-FROM ghcr.io/ministryofjustice/analytical-platform-airflow-r-base:1.4.1@sha256:5b49584f0a6406f82d955318fc83ca7b6fa8b9503248d373587e623fd3579ef8
+FROM ghcr.io/ministryofjustice/analytical-platform-airflow-r-base:1.5.0@sha256:e36020e233f2295a0688046ad97d118aa64bd101cc397ea2b6ab5f2b1463c2d9
 
 # Below is an example of how to use the base image
 # COPY renv.lock renv.lock
